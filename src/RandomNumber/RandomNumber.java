@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Nicole Tao
+ * RandomNumber.java
+ * This program will generate a random number based on the minimun and maximum values entered
+ * March 18th, 2018
  */
 package RandomNumber;
 
@@ -131,12 +132,14 @@ public class RandomNumber extends javax.swing.JFrame {
     private void buttonGenerateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGenerateActionPerformed
         double max, min, randomNumber;
         
+        //Converts String values to Double values
         max = Double.parseDouble(textMax.getText());   
         min = Double.parseDouble(textMin.getText());
         
+        //Sets a range of possible numbers that can be generated based on values inputed
         randomNumber = (Math.floor(Math.random() * (max - min + 1) + min) );
         
-        
+        //Displays a message with the random number in the output label
         labelOutput.setText("The random number is " + randomNumber);
     }//GEN-LAST:event_buttonGenerateActionPerformed
 
